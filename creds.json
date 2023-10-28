@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "ascilo-esperanza",
+  "private_key_id": "6900be77b1b1ad593769194f2d3b05f220b77ff8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDPOgLP6fxr7Y3F\n+bw/Y8o/qsWtRtjUjUMzaMrTQsMGenfxLPE4iP70QAXT+0k4dYqM6PldyJ7E6qhM\nNZIihq6fn8CD3ORYprTdA2tNezaVVrStEyn77pmSR2sHp7VE1Dtj3t/tYGhQESSd\nMC0GNAjdmayskrGRNa22MtLzb14lqKqFgbLD76DZE+IYdE6J0jzh8ABBWCNks5m7\ne7duAOb8aHAkpOG5D6HkCaWanj1HqVYtT0D26UtkbpdhOQGUlQ/4dnLggZH8ff+P\nyvhJMMAs2BBMcXp9oG1FITANWs2jcRpqSpz8L+vFqbAsuH205SbDuA/bGJWknlaq\nO/fUPYlNAgMBAAECggEAHXY0byXnntqTxPlYA7UmzH11hEilzDZXPwhficCcpJ+l\nzNKkavLDOKufiH9Z7h5798OprGU4+WsZSVh2cdUvH3+hab3ucxIkdaWmTEo/vOSq\nZE7ssaY/DDZ+J4T29xWraewGbyO9QODnETgHtrGQLx1JmPF0MF5u15ALQNPtETJT\nkFlwJFIcD+ySsFKCVqK0os8jFO3ewnZMXwlt1InnWAoh3OfS42sNcc2y+oM0HGwl\n2XWMXAuwF+PdubWOX4SqAOL/zK26zvMWyl0UaVHVaUOVIK9HA9bAsi1wfSqi7HR6\n7nx7M/t3eLrl5MGneQhFe+xN8taIO9XKcKAa0uc3ewKBgQDzaUms0hlxe7WUA6Z2\n7L49yJkZ/N85kYQaz82TFBTz9brwNNMsTn0dyB2RcC0a8/3s5hq6JyxGxnwZKr0C\n8VSs4KXrqQm13dOBacxb5W/CNv5ZFmr1IviBOsQeBnf202+SjQroz5kRKeBZuuQm\nsDhqHXQ+iC5Bmb5pt0T9l5UEYwKBgQDZ8aVf6zVOq/idwx1rcJg2nLfgSjBABOn8\n97FAFp1jI97qorf72yPH9oZGhaCGf3U5A9pDCpbBSXLMh10RsI/tWMQMoZqhSl46\nkxMZjjzNdsclOmIFgkgS63bIWWsH9o5prwY08AeA4gfFiUq856P4zRDQQx4d9hNI\napAgI4RyjwKBgA0prGpEEkwovHD8oYvc0YzVxDG7kvax/8rTYfKKK3fl2e4TbTgA\nJpPttmue/VFv0FN3PgrDA4nwQdW6ke4Ozt1qaI6N3ZCQJlfhOMPfbGO8RZTbuXz4\nHygd3W0iPGqElIwARI7Cayyabx9rE9tjvClA3oBjLN0vSzS8TGbKQ6yxAoGAcfmm\nU4gs44yZwt9D5mkGoSDKJFiH7SLkvy9Fmc951Vvv+uLHtsV+a9dnlz/QmCXVxtBV\n91N1TXW8vGtZ56NfUW9nb3ef5xN+PcGmbmntMEIamURz+I+OY56SCuqAR7TP+0LV\nyx9vvR33lH1dAXdeUAHl9hPzjxWeNfPMlZIddM8CgYEAua7llJvQSbZSyd+MIZTh\nxug3Ke7REmm/eEdvrtfQxInm5hTaj+5uxDqtXInn9ESpqdJ/+/t15mupb6kExlOg\nASV77mopvoSSArUhlmI05DTrheXrdvdqcCwTgmw3mh9wv6hyLRwomzxs8rqFBH6k\nV3E/JX/l0tUugL+DvsUS6LI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-n56iv@ascilo-esperanza.iam.gserviceaccount.com",
+  "client_id": "105469271665708505978",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-n56iv%40ascilo-esperanza.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
