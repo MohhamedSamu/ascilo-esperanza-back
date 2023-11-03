@@ -14,8 +14,12 @@ router.post("/signup", async (req, res) => {
 });
 
 router.post("/signin", async (req, res) => {
-  let retMsg = await db.admin.auth().getUserByEmail(req.body.email)
-  res.json(retMsg);
+  try {
+    let retMsg = await db.admin.auth().getUserByEmail(req.body.email)
+    res.json(retMsg);
+  }catch (error) {
+    res.status(400).send({ msg: "error", info: "Email no existe" });
+  }
 });
 
 router.post("/resetPassword", async (req, res) => {
