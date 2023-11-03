@@ -8,7 +8,7 @@ router.post("/signup", async (req, res) => {
     email: req.body.email,
     password: req.body.password,
     emailVerified: false,
-    disabled: false
+    disabled: false,
   })
   res.json(retMsg);
 });
