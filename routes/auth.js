@@ -18,4 +18,9 @@ router.post("/signin", async (req, res) => {
   res.json(retMsg);
 });
 
+router.post("/resetPassword", async (req, res) => {
+  let retMsg = await db.admin.auth().generatePasswordResetLink(req.body.email)
+  res.json(retMsg);
+});
+
 module.exports = router;

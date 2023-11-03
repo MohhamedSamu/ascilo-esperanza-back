@@ -16,25 +16,29 @@ router.post("/", async (req, res) => {
     let userWithSameEmail = await db.admin
       .auth()
       .getUserByEmail(req.body.email);
+      console.log({ msg: "error", info: "Email ya usado"}, userWithSameEmail)
 
-    let retMsg2 = await db.admin.auth().createUser({
-      email: req.body.email,
-      password: req.body.password,
-      emailVerified: true,
-      disabled: false,
-      displayName: "doctor",
-    });
-
-    delete req.body.password;
-
-    let retMsg = await db.doctores.add(data);
-
-    console.log("nueva cuenta: ", retMsg2);
-
-    res.send({ msg: "success", return: retMsg, return2: retMsg2 });
-  } catch (error) {
     res.status(400).send({ msg: "error", info: "Email ya usado" });
-    console.error(error);
+  } catch (error) {
+    if (error.code == "auth/user-not-found") {
+      let retMsg2 = await db.admin.auth().createUser({
+        email: req.body.email,
+        password: req.body.password,
+        emailVerified: true,
+        disabled: false,
+        displayName: "doctor",
+      });
+
+      delete req.body.password;
+
+      let retMsg = await db.doctores.add(data);
+
+      console.log("nueva cuenta: ", retMsg2);
+
+      res.send({ msg: "success", return: retMsg, return2: retMsg2 });
+    } else {
+      console.error(error);
+    }
   }
 });
 
