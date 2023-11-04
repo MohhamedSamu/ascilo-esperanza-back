@@ -4,7 +4,7 @@ const cloudinaryService = require("../services/cloudinary");
 
 router.get("/getFolder", async (req, res) => {
     try {
-        let folderName = "preset_doctores";
+        let folderName = "preset_pacientes";
         let folder_preset = await cloudinaryService.createFolder(folderName);
         console.log(folder_preset);
         res.send({ msg: "success", return: folder_preset });
