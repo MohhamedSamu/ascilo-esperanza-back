@@ -9,6 +9,13 @@ router.get("/", async (req, res) => {
   res.send({ msg: "success", return: list });
 });
 
+router.get("/getByEmail/:email", async (req, res) => {
+  console.log("req.body.email", req.body.email)
+  const snapshot = await db.doctores.get();
+  const list = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })).filter((doc) => doc.email == req.params.email);
+  res.send({ msg: "success", return: list });
+});
+
 router.post("/", async (req, res) => {
   const data = req.body;
 
