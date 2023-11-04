@@ -9,4 +9,5 @@ const app = admin.initializeApp({
 const db = getFirestore();
 
 module.exports.doctores = db.collection('doctores')
+module.exports.pacientes = db.collection('pacientes')
 module.exports.admin = admin
