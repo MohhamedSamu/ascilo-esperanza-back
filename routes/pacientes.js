@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const cloudinaryService = require("../services/cloudinary");
 
 const db = require("../data-config.js");
 
@@ -17,7 +18,9 @@ router.get("/getByEmail/:email", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const data = req.body;
-
+  let folderName = "preset_pacientes";
+  let uploadPic = await cloudinaryService.uploadCloudinaryImageUrl(folderName, req.body.picture);
+  console.log(uploadPic);
   try {
     let userWithSameEmail = await db.admin
       .auth()
@@ -36,6 +39,9 @@ router.post("/", async (req, res) => {
       });
 
       delete req.body.password;
+
+      data.picture = uploadPic.secure_url;
+      console.log(data);
 
       let retMsg = await db.pacientes.add(data);
 
