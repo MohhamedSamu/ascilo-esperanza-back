@@ -4,14 +4,15 @@ const router = express.Router();
 const db = require("../data-config.js");
 
 router.get("/getByDoctorEmail/:email", async (req, res) => {
-  console.log("req.body.email", req.body.email)
+  console.log("req.params.email", req.params.email)
   const snapshot = await db.citas.get();
   const list = snapshot.docs.map((cita) => ({ id: cita.id, ...cita.data() })).filter((cita) => cita.doctor.email == req.params.email);
   res.send({ msg: "success", return: list });
 });
 
 router.get("/getByPacienteEmail/:email", async (req, res) => {
-  console.log("req.body.email", req.body.email)
+  console.log("req.params.email", req.params.email)
+
   const snapshot = await db.citas.get();
   const list = snapshot.docs.map((cita) => ({ id: cita.id, ...cita.data() })).filter((cita) => cita.paciente.email == req.params.email);
   res.send({ msg: "success", return: list });

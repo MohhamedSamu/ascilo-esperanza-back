@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/getByEmail/:email", async (req, res) => {
-  console.log("req.body.email", req.body.email)
+  console.log("req.params.email a", req.params.email)
   const snapshot = await db.doctores.get();
   const list = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })).filter((doc) => doc.email == req.params.email);
   res.send({ msg: "success", return: list });
