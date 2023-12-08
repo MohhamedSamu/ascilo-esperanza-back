@@ -14,6 +14,9 @@ app.use("/doctores", doctoresRouter)
 const pacientesRouter = require("./routes/pacientes.js")
 app.use("/pacientes", pacientesRouter)
 
+const citasRouter = require("./routes/cita.js")
+app.use("/citas", citasRouter)
+
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`App is listening on PORT: ${PORT}`)

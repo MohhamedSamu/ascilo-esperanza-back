@@ -10,4 +10,5 @@ const db = getFirestore();
 
 module.exports.doctores = db.collection('doctores')
 module.exports.pacientes = db.collection('pacientes')
+module.exports.citas = db.collection('citas')
 module.exports.admin = admin
