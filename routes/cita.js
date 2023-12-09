@@ -36,6 +36,7 @@ router.post("/newPacienteCita", async (req, res) => {
 
 router.post("/confirmCita/:id", async (req, res) => {
   delete req.body.id;
+  const id = req.params.id;
   const data = {
     estado : "confirmada"
   };
@@ -45,6 +46,7 @@ router.post("/confirmCita/:id", async (req, res) => {
 
 router.post("/rechazarCita/:id", async (req, res) => {
   delete req.body.id;
+  const id = req.params.id;
   const data = {
     estado : "rechazada"
   };
@@ -54,6 +56,7 @@ router.post("/rechazarCita/:id", async (req, res) => {
 
 router.post("/completarCita/:id", async (req, res) => {
   delete req.body.id;
+  const id = req.params.id;
   const data = {
     estado : "completar"
   };
