@@ -20,7 +20,6 @@ router.post("/", async (req, res) => {
   const data = req.body;
   let folderName = "preset_pacientes";
   let uploadPic = await cloudinaryService.uploadCloudinaryImageUrl(folderName, req.body.picture);
-  console.log(uploadPic);
   try {
     let userWithSameEmail = await db.admin
       .auth()
@@ -41,11 +40,8 @@ router.post("/", async (req, res) => {
       delete req.body.password;
 
       data.picture = uploadPic.secure_url;
-      console.log(data);
 
       let retMsg = await db.pacientes.add(data);
-
-      console.log("nueva cuenta: ", retMsg2);
 
       res.send({ msg: "success", return: retMsg, return2: retMsg2 });
     } else {

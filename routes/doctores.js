@@ -11,7 +11,6 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/getByEmail/:email", async (req, res) => {
-  console.log("req.params.email a", req.params.email)
   const snapshot = await db.doctores.get();
   const list = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })).filter((doc) => doc.email == req.params.email);
   res.send({ msg: "success", return: list });
@@ -21,7 +20,6 @@ router.post("/", async (req, res) => {
   const data = req.body;
   let folderName = "preset_doctores";
   let uploadPic = await cloudinaryService.uploadCloudinaryImageUrl(folderName, req.body.picture);
-  console.log(uploadPic);
   try {
     let userWithSameEmail = await db.admin
       .auth()
@@ -42,11 +40,8 @@ router.post("/", async (req, res) => {
       delete req.body.password;
 
       data.picture = uploadPic.secure_url;
-      console.log(data);
 
       let retMsg = await db.doctores.add(data);
-
-      console.log("nueva cuenta: ", retMsg2);
 
       res.send({ msg: "success", return: retMsg, return2: retMsg2 });
     } else {

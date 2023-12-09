@@ -30,7 +30,6 @@ cloudinaryService.createFolder = async (folder) => {
 
       });
 
-      console.log("Folder: ",result);
     } catch (e) {
       console.log("Error", e);
     }
