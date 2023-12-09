@@ -39,7 +39,7 @@ router.post("/confirmCita/:id", async (req, res) => {
   const data = {
     estado : "confirmada"
   };
-  let retMsg = await db.citas.cita(id).update(data);
+  let retMsg = await db.citas.doc(id).update(data);
   res.send({ msg: "success", return: retMsg });
 });
 
@@ -48,7 +48,7 @@ router.post("/rechazarCita/:id", async (req, res) => {
   const data = {
     estado : "rechazada"
   };
-  let retMsg = await db.citas.cita(id).update(data);
+  let retMsg = await db.citas.doc(id).update(data);
   res.send({ msg: "success", return: retMsg });
 });
 
@@ -57,7 +57,7 @@ router.post("/completarCita/:id", async (req, res) => {
   const data = {
     estado : "completar"
   };
-  let retMsg = await db.citas.cita(id).update(data);
+  let retMsg = await db.citas.doc(id).update(data);
   res.send({ msg: "success", return: retMsg });
 });
 
@@ -72,7 +72,7 @@ router
   .put(async (req, res) => {
     const id = req.params.id;
     delete req.body.id;
-    let retMsg = await db.citas.cita(id).update(req.body);
+    let retMsg = await db.citas.doc(id).update(req.body);
     res.send({ msg: "success", return: retMsg });
   })
 
